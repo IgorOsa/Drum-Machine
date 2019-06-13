@@ -154,10 +154,10 @@ clearDisplay() {
 render() {
   return (
     <div id="drum-machine" className="inner-container">
+      <h2 className="heading">FCC Drum Machine</h2>
       <PadBank  	
         updateDisplay={this.displayClipName}
       />
-
       <div className="controls-container">
         <p id="display">
           {this.state.display}

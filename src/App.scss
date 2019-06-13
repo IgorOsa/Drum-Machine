@@ -22,6 +22,9 @@ body {
   width: 660px;
   text-align: center;
   background-color: lighten(grey, 20%);
+  .heading {
+    margin-top: 20px;
+  }
   .pad-bank {
     width: $padWidth * 3 + 32;
     height: $padHeight * 3 + 32;
