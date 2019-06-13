@@ -1,0 +1,63 @@
+$padWidth: 100px;
+$padHeight: 80px;
+$settingsColor: greenyellow;
+@import url('https://fonts.googleapis.com/css?family=Goblin+One');
+
+body {
+  font-family: Goblin One;
+  user-select: none;
+  background-color: lighten(grey, 10%);
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  height: 100vh;
+}
+
+.inner-container {
+  outline: 5px solid $settingsColor;
+  position: relative;
+  width: 660px;
+  text-align: center;
+  background-color: lighten(grey, 20%);
+  .pad-bank {
+    width: $padWidth * 3 + 32;
+    height: $padHeight * 3 + 32;
+    display: inline-block;
+    margin: 20px;
+    .drum-pad {
+      position: relative;
+      float: left;
+      width: $padWidth;
+      height: $padHeight;
+      margin-right: 10px;
+      border-radius: 10px;
+      padding-top: 35px;
+      box-sizing: border-box;
+      cursor: pointer;
+    }
+  }
+  .controls-container {
+    width: 240px;
+    height: $padHeight * 1 + 32;
+    display: inline-block;
+    margin: 40px 20px 0 10px;
+    vertical-align: top;
+    #display {
+      width: 220px;
+      background-color: gray;
+      margin: 15px auto;
+      padding: 15px;
+      box-sizing: border-box;
+      align-items: stretch;
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .inner-container {
+    transform: scale(0.7);
+  }
+}
